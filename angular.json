@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "trasladista"
+    }
+  },
+  "defaultProject": "trasladista",
+  "cli": {
+    "analytics": false
+  }
 }
