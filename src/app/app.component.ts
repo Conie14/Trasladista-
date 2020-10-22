@@ -9,11 +9,11 @@ import { FirebaseServiceService } from './services/firebase-service.service';
 export class AppComponent implements OnInit{
   title = 'trasladista';
   config: any;
-  collection = { count: 0, data: [] }
+  collection = { count: 10, data: [] }
 
   ngOnInit(): void {
-    //this.idFirabaseActualizar = "";
-    //this.actualizar = false;
+
+
     for(var i=0; i<this.collection.count; i++){
       this.collection.data.push({
         id: i,
@@ -23,9 +23,6 @@ export class AppComponent implements OnInit{
         correo:"correo"+i,
         telefono:10 +i,
         rfc:"rfc1256"+i,
-
-
-
 
       })
     }

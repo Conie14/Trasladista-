@@ -12,6 +12,7 @@ import { SeguimientoComponent } from './seguimiento/seguimiento.component';
 import { NotificacionesComponent } from './notificaciones/notificaciones.component';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { environment } from '../environments/environment';
   ],
   imports: [
     BrowserModule ,
+    NgxPaginationModule,
     AngularFireModule.initializeApp(environment.firebase)
   ],
   providers: [],
