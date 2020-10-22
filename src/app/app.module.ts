@@ -10,7 +10,8 @@ import { VeiculosComponent } from './veiculos/veiculos.component';
 import { OperadoresComponent } from './operadores/operadores.component';
 import { SeguimientoComponent } from './seguimiento/seguimiento.component';
 import { NotificacionesComponent } from './notificaciones/notificaciones.component';
-
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { NotificacionesComponent } from './notificaciones/notificaciones.compone
 
   ],
   imports: [
-    BrowserModule
+    BrowserModule ,
+    AngularFireModule.initializeApp(environment.firebase)
   ],
   providers: [],
   bootstrap: [AppComponent]
