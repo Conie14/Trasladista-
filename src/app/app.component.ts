@@ -23,7 +23,7 @@ export class AppComponent implements OnInit{
         correo:"correo"+i,
         telefono:10 +i,
         rfc:"rfc1256"+i,
-        
+
 
 
 
@@ -36,9 +36,14 @@ export class AppComponent implements OnInit{
       itemsPerPage: 5,
       currentPage: 1,
       totalItems: this.collection.count
-  }
-
-
-
+  };
 }
+pageChanged(event) {
+  this.config.currentPage = event;
+}
+
+
+
+
+
 }
