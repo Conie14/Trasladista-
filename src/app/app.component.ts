@@ -1,6 +1,7 @@
 import { Component,OnInit } from '@angular/core';
 
 import { FirebaseServiceService } from './services/firebase-service.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,6 +11,9 @@ export class AppComponent implements OnInit{
   title = 'trasladista';
   config: any;
   collection = { count: 10, data: [] }
+//cliente:ClientesComponent=new ClientesComponent();
+
+  constructor(private FirebaseServiceService:FirebaseServiceService){}
 
   ngOnInit(): void {
 
@@ -37,7 +41,12 @@ export class AppComponent implements OnInit{
 }
 pageChanged(event) {
   this.config.currentPage = event;
+
+  //this.FirebaseServiceService.crearCliente(this.cliente).subscribe(resp=>{console.log(resp);});
 }
+
+
+
 
 
 

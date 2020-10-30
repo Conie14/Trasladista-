@@ -6,84 +6,9 @@
 <!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
 <!-- * * * * * * * to get started with your project! * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<app-clientes></app-clientes>
 
-<app-servicios></app-servicios>
 
-<app-lista-verificacion></app-lista-verificacion>
-
-<app-veiculos></app-veiculos>
-
-<app-viaticos></app-viaticos>
-
-<app-operadores></app-operadores>
-
-<app-seguimiento></app-seguimiento>
-
-<app-notificaciones></app-notificaciones>
-
-<div style="text-align: center;">
-  <h2>Sistema cliente</h2>
-
-  <table class="table">
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Nombre</th>
-        <th>Apellido paterno</th>
-        <th>Apellido materno</th>
-        <th>Correo</th>
-        <th>Telefono</th>
-        <th>RFC</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let item of collection.data | paginate: config">
-        <td>{{item.id}}</td>
-        <td>{{item.nombre}}</td>
-        <td>{{item.apellidop}}</td>
-        <td>{{item.apellidom}}</td>
-        <td>{{item.correo}}</td>
-        <td>{{item.telefono}}</td>
-        <td>{{item.rfc}}</td>
-        <button type="button" class="btn btn-primary" (click)="openEditar(content,item)">Editar</button>
-        <button type="button" class="btn btn-danger" (click)="eliminar(item)">Eliminar</button>
-        <td>
-      </tr>
-    </tbody>
-  </table>
-  <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
-  <ng-template #content let-modal>
-    <div class="modal-header">
-      <h4 class="modal-title" id="modal-basic-title">cliente create/update</h4>
-      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">
-      <form>
-        <div class="form-group">
-          <form [formGroup]="estudianteForm">
-            <div class="form-group">
-              <label>Id</label>
-              <input type="number" formControlName="id" class="form-control">
-            </div>
-            <div class="form-group">
-              <label>Nombre</label>
-              <input type="text" formControlName="nombre" class="form-control">
-            </div>
-            <div class="form-group">
-              <label>Apellido</label>
-              <input type="text" formControlName="apellido" class="form-control">
-            </div>
-          </form>
-        </div>
-      </form>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-outline-dark" (click)="guardarEstudiante()" *ngIf="!actualizar">Guardar</button>
-      <button type="button" class="btn btn-outline-dark" (click)="actualizarEstudiante()" *ngIf="actualizar">Actualizar</button>
-    </div>
-  </ng-template>
-
+<div class="mt-5">
+  <router-outlet></router-outlet>
 </div>
+

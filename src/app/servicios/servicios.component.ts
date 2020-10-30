@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+
 
 @Component({
   selector: 'app-servicios',
   templateUrl: './servicios.component.html',
   styleUrls: ['./servicios.component.css']
 })
-export class ServiciosComponent implements OnInit {
+export class ServiciosComponent {
 
-  constructor() { }
+  private url='https://trasladista-f5e9d.firebaseio.com';
 
-  ngOnInit(): void {
-  }
+  constructor(private http:HttpClient) { }
+
+ 
+
+
 
 }
