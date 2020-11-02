@@ -10,12 +10,16 @@ import{HttpClientModule}from '@angular/common/http';
 import { ClienteComponent } from './pages/cliente/cliente.component';
 import { ClientesComponent } from './pages/clientes/clientes.component';
 import{AppRoutingModule}from './app-routing.module';
+import { OperadorComponent } from './pages/operador/operador.component';
+import { OperadoresComponent } from './pages/operadores/operadores.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ClienteComponent,
-    ClientesComponent
+    ClientesComponent,
+    OperadorComponent,
+    OperadoresComponent
 
 
   ],

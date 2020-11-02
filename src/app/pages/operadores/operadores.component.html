@@ -1,0 +1,45 @@
+<p>operadores works!</p>
+<h1>Listado operadores</h1>
+<hr>
+<base href="/">
+
+
+<div class="row">
+  <div class="col text-right">
+      <a [routerLink]="['/operador/nuevo']" routerLinkActive="active" class="button">Agregar operador</a>
+      <router-outlet></router-outlet>
+  </div>
+</div>
+
+<table class="table mt-3">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido paterno</th>
+      <th scope="col">Apellido Materno</th>
+      <th scope="col">correo</th>
+      <th scope="col">Telefono</th>
+      <th scope="col"> h</th>
+    </tr>
+
+  </thead>
+  <tbody>
+    <tr *ngFor="let operador of operadores; let i=index">
+      <th scope="row">{{i+1}}</th>
+      <td>{{operador.nombre}}</td>
+      <td>{{operador.apellido_paterno}}</td>
+      <td>{{operador.apellido_materno}}</td>
+      <td>{{operador.correo}}</td>
+      <td>{{operador.telefono}}</td>
+      <td>
+        <button class="btn btn-info mr-1"
+          [routerLink]="['/operador',operador.id]">/</button>
+
+        <button class="btn btn-danger" (click)='borrarOperador(operador)' >x</button>
+      </td>
+
+    </tr>
+
+  </tbody>
+</table>
