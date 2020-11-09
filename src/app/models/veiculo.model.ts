@@ -1,0 +1,119 @@
+
+
+export class VeiculoModel{
+
+  id:string;
+  marca:string;
+  ano:number;
+  color:string;
+  modelo:string;
+  telefono:number;
+  serie:string;
+  asientos:boolean;
+  aire_acondicionado:boolean;
+  alfombra:boolean;
+  antena_toldo:boolean;
+  bateriayniveles:boolean;
+  centrosrin:boolean;
+  cielo:boolean;
+  cinturonesseguridad:boolean;
+  condicionbajopiso:boolean;
+  controldvdpilasaudifonos:boolean;
+  emblemas_molduras:boolean;
+  encendedor_tapa:boolean;
+  estuchedocumentos:boolean;
+  gato:boolean;
+  //juntos
+  kilometraje:boolean;
+  kilometraje_num:number;
+
+  kitherramienta:boolean;
+  limpiadores:boolean;
+  llantarefaccion:boolean;
+  llantas:boolean;
+  llavescontrolesalarme:boolean;
+  llavesduplicado:boolean;
+  llavetuercas:boolean;
+  lucesinterystop:boolean;
+  lucesniebla:boolean;
+  manuales:boolean;
+  marcointerpuertas:boolean;
+  memoria:boolean;
+  radioybocinas:boolean;
+  tapetes:boolean;
+  taponesrines:boolean;
+  tapongasolina:boolean;
+  tolvas:boolean;
+  transmision_conbustible:boolean;
+  vasocenicero:boolean;
+    ///junto
+  retrovisor:boolean;
+  espejo_concavo:boolean;
+  ///junto
+  tapete_cajuela:boolean;
+  redcarga:boolean;
+  //junto
+  gancho_quita_tapones:boolean;
+  remolque:boolean;
+  //junto
+  birlo_seguridad:boolean;
+  bs_llanta_aux:boolean;
+  automatico:boolean;
+  standard:boolean;
+
+  constructor(){
+    this.asientos=false;
+    this.alfombra=false;
+    this.antena_toldo=false;
+    this.bateriayniveles=false;
+    this.centrosrin=false;
+    this.cielo=false;
+    this.cinturonesseguridad=false;
+    this.condicionbajopiso=false;
+    this.controldvdpilasaudifonos=false;
+    this.emblemas_molduras=false;
+    this.encendedor_tapa=false;
+    this.estuchedocumentos=false;
+    this.gato=false;
+    //juntos
+    this.kilometraje=false;
+
+    this.aire_acondicionado=false;
+    this.kitherramienta=false;
+    this.limpiadores=false;
+    this.llantarefaccion=false;
+    this.llantas=false;
+    this.llavescontrolesalarme=false;
+    this.llavesduplicado=false;
+    this.llavetuercas=false;
+    this.lucesinterystop=false;
+    this.lucesniebla=false;
+    this.manuales=false;
+    this.marcointerpuertas=false;
+    this. memoria=false;
+    this.radioybocinas=false;
+    this.tapetes=false;
+    this.taponesrines=false;
+    this.tapongasolina=false;
+    this.tolvas=false;
+    this.transmision_conbustible=false;
+    this.vasocenicero=false;
+      ///junto
+    this.retrovisor=false;
+    this.espejo_concavo=false;
+    ///junto
+    this.tapete_cajuela=false;
+    this.redcarga=false;
+    //junto
+    this.gancho_quita_tapones=false;
+    this.remolque=false;
+    //junto
+    this.birlo_seguridad=false;
+    this.bs_llanta_aux=false;
+
+
+    this.automatico=false;
+    this.standard=false;
+  }
+
+  }

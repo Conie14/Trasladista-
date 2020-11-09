@@ -4,6 +4,8 @@ import { ClienteComponent } from './pages/cliente/cliente.component';
 import { ClientesComponent } from './pages/clientes/clientes.component';
 import { OperadorComponent } from './pages/operador/operador.component';
 import { OperadoresComponent } from './pages/operadores/operadores.component';
+import { VeiculoComponent } from './pages/veiculo/veiculo.component';
+import { VeiculosComponent } from './pages/veiculos/veiculos.component';
 
 
 const routes:Routes=[
@@ -14,7 +16,11 @@ const routes:Routes=[
 
   {path:'operadores',component:OperadoresComponent},
   {path:'operador/:id',component:OperadorComponent},
-  {path:'',pathMatch:'full',redirectTo:'operadores'}
+  {path:'',pathMatch:'full',redirectTo:'operadores'},
+
+  {path:'veiculos',component:VeiculosComponent},
+  {path:'veiculo/:id',component:VeiculoComponent},
+  {path:'',pathMatch:'full',redirectTo:'veiculos'},
 
 ];
 

@@ -12,6 +12,9 @@ import { ClientesComponent } from './pages/clientes/clientes.component';
 import{AppRoutingModule}from './app-routing.module';
 import { OperadorComponent } from './pages/operador/operador.component';
 import { OperadoresComponent } from './pages/operadores/operadores.component';
+import{AngularFireDatabaseModule}from'@angular/fire/database';
+import { VeiculoComponent } from './pages/veiculo/veiculo.component';
+import { VeiculosComponent } from './pages/veiculos/veiculos.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,9 @@ import { OperadoresComponent } from './pages/operadores/operadores.component';
     ClienteComponent,
     ClientesComponent,
     OperadorComponent,
-    OperadoresComponent
+    OperadoresComponent,
+    VeiculoComponent,
+    VeiculosComponent
 
 
   ],
@@ -30,7 +35,8 @@ import { OperadoresComponent } from './pages/operadores/operadores.component';
     HttpClientModule,
     AppRoutingModule,
     RouterModule,
-    
+    AngularFireDatabaseModule,
+
     AngularFireModule.initializeApp(environment.firebase)
   ],
   providers: [],

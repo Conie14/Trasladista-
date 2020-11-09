@@ -1,0 +1,405 @@
+<p>veiculo works!</p>
+<h1>veiculo <small>Nombre
+</small> </h1>
+<hr>
+
+
+<div class="row text-right">
+  <div class="col">
+    <button class="btn btn-danger"
+            routerLink="/veiculos">
+      <i class="fa fa-arrow-left"></i>
+      Regresar
+    </button>
+  </div>
+</div>
+
+<div class="row animated fadeIn faster">
+  <div class="col">
+  <form (ngSubmit)="guardar(f)" #f="ngForm">
+      <div class="form-group">
+        <label>Firebase ID</label>
+        <input type="text"
+               class="form-control"
+               placeholder="Firebase ID"
+               [(ngModel)]="veiculo.id"
+               name="id"
+               disabled="disabled">
+        <small class="form-text text-muted">Este campo es autogenerado</small>
+      </div>
+
+      <div class="form-group">
+        <label>Marca</label>
+        <input type="text"
+               class="form-control"
+               placeholder="Marca"
+               [(ngModel)]="veiculo.marca"
+               name="marca"
+               required>
+      </div>
+
+      <div class="form-group">
+        <label> Modelo</label>
+        <input type="text"
+               class="form-control"
+               [(ngModel)]="veiculo.modelo"
+               name="modelo"
+               placeholder="Modelo">
+    </div>
+    <div class="form-group">
+      <label>Serie</label>
+      <input type="text"
+             class="form-control"
+             [(ngModel)]="veiculo.serie"
+             name="serie"
+             placeholder=" Serie">
+  </div>
+
+<div class="form-group">
+  <label>color</label>
+  <input type="text"
+         class="form-control"
+         [(ngModel)]="veiculo.color"
+         name="color"
+         placeholder="color ">
+</div>
+
+
+<div class="form-group">
+  <label>año</label>
+  <input type="text"
+         class="form-control"
+         [(ngModel)]="veiculo.ano"
+         name="ano"
+         placeholder="año ">
+</div>
+<!----- acessorios y funcionalidades--------->
+<div class="form-group">
+  <label>acessorios y funcionalidades</label>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox"  [(ngModel)]="veiculo.llavescontrolesalarme" name="llavescontrolesalarme">
+    <label class="form-check-label" >
+      Llaves, Controles y Alarma
+    </label>
+  </div>
+<!--poner en la misma linea solo 2-->
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox"   [(ngModel)]="veiculo.kilometraje" name="kilometraje">
+    <label class="form-check-label" >
+      Kilometraje
+    </label>
+  </div>
+  <div class="form-group">
+    <label></label>
+    <input type="text"
+           class="form-control"
+           [(ngModel)]="veiculo.kilometraje_num" name="kilometraje_num"
+           placeholder="kilometraje ">
+  </div>
+  <!--/hasta aqui-->
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox"   [(ngModel)]="veiculo.radioybocinas" name="radioybocinas">
+    <label class="form-check-label" >
+      Radio y Bocinas
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox"  [(ngModel)]="veiculo.aire_acondicionado" name="aire_acondicionado">
+    <label class="form-check-label" >
+      Aire Acondicionado
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox"  [(ngModel)]="veiculo.lucesinterystop" name="lucesinterystop">
+    <label class="form-check-label" >
+      Luces, Intermitentes y Stop
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox"  [(ngModel)]="veiculo.lucesniebla" name="lucesniebla">
+    <label class="form-check-label" >
+      Luces de Niebla
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox"  [(ngModel)]="veiculo.limpiadores" name="limpiadores">
+    <label class="form-check-label" >
+      Limpiadores
+    </label>
+  </div>
+
+<!--poner en la misma linea solo 2-->
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox"  [(ngModel)]="veiculo.retrovisor" name="retrovisor">
+    <label class="form-check-label" >
+      Retrovisor
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox"  [(ngModel)]="veiculo.espejo_concavo" name="espejo_concavo">
+    <label class="form-check-label" >
+      Espejo Cóncavo
+    </label>
+  </div>
+<!--/hasta aqui-->
+
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox"  [(ngModel)]="veiculo.vasocenicero" name="vasocenicero">
+      <label class="form-check-label" >
+        Vaso Cenicero
+      </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox"  [(ngModel)]="veiculo.encendedor_tapa" name="encendedor_tapa">
+    <label class="form-check-label" >
+      Encendedor / Tapa
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox"  [(ngModel)]="veiculo.estuchedocumentos" name="estuchedocumentos">
+    <label class="form-check-label" >
+      Estuche Documentos
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox"  [(ngModel)]="veiculo.manuales" name="manuales">
+    <label class="form-check-label" >
+      Manuales
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox"  [(ngModel)]="veiculo.memoria" name="memoria">
+    <label class="form-check-label" >
+      Memoria
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox"  [(ngModel)]="veiculo.cinturonesseguridad" name="cinturonesseguridad">
+    <label class="form-check-label" >
+      Cinturones de Seguridad
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox"  [(ngModel)]="veiculo.controldvdpilasaudifonos" name="controldvdpilasaudifonos">
+    <label class="form-check-label" >
+      Control DVD, Pilas y Audifonos
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox"  [(ngModel)]="veiculo.tapetes" name="tapetes">
+    <label class="form-check-label" >
+      Tapetes
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox"  [(ngModel)]="veiculo.alfombra" name="alfombra">
+    <label class="form-check-label" >
+      Alfombra
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox"  [(ngModel)]="veiculo.cielo" name="cielo">
+    <label class="form-check-label" >
+      Cielo
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox"  [(ngModel)]="veiculo.asientos" name="asientos">
+    <label class="form-check-label" >
+      Asientos
+    </label>
+  </div>
+
+<!--poner en la misma linea solo 2-->
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox"  [(ngModel)]="veiculo.tapete_cajuela" name="tapete_cajuela">
+    <label class="form-check-label" >
+      Tapete Cajuela
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox"  [(ngModel)]="veiculo.redcarga" name="redcarga">
+    <label class="form-check-label" >
+      Red Carga
+    </label>
+  </div>
+  <!--/hasta aqui-->
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox"  [(ngModel)]="veiculo.llantarefaccion" name="llantarefaccion">
+    <label class="form-check-label" >
+      LLanta Refacción
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox"  [(ngModel)]="veiculo.kitherramienta" name="kitherramienta">
+    <label class="form-check-label" >
+      Kit Herramientas
+    </label>
+  </div>
+<!--poner en la misma linea solo 2-->
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox"  [(ngModel)]="veiculo.birlo_seguridad" name="birlo_seguridad">
+    <label class="form-check-label" >
+      Birlo Seguridad
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox"  [(ngModel)]="veiculo.bs_llanta_aux" name="bs_llanta_aux">
+    <label class="form-check-label" >
+      B.S. Llanta Aux.
+    </label>
+  </div>
+  <!--/hasta aqui-->
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox"  [(ngModel)]="veiculo.llavetuercas" name="llavetuercas">
+    <label class="form-check-label" >
+      Llave Tuercas
+    </label>
+  </div>
+<!--poner en la misma linea solo 2-->
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox"  [(ngModel)]="veiculo.gancho_quita_tapones" name="gancho_quita_tapones">
+    <label class="form-check-label" >
+      Gancho quita tapones
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox"  [(ngModel)]="veiculo.remolque" name="remolque">
+    <label class="form-check-label" >
+      Remolque
+    </label>
+  </div>
+  <!--/hasta aqui-->
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox"  [(ngModel)]="veiculo.gato" name="gato">
+    <label class="form-check-label" >
+      Gato
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox"  [(ngModel)]="veiculo.llantas" name="llantas">
+    <label class="form-check-label" >
+      Llantas
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox"  [(ngModel)]="veiculo.taponesrines" name="taponesrines">
+    <label class="form-check-label" >
+      Tapones de Rines
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox"  [(ngModel)]="veiculo.centrosrin" name="centrosrin">
+    <label class="form-check-label" >
+      Centros Rin
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox"  [(ngModel)]="veiculo.tapongasolina" name="tapongasolina">
+    <label class="form-check-label" >
+      Tapón Gasolina
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox"  [(ngModel)]="veiculo.emblemas_molduras" name="emblemas_molduras">
+    <label class="form-check-label" >
+      Emblemas / Molduras
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox"  [(ngModel)]="veiculo.antena_toldo" name="antena_toldo">
+    <label class="form-check-label" >
+      Antena / Toldo
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox"  [(ngModel)]="veiculo.bateriayniveles" name="bateriayniveles">
+    <label class="form-check-label" >
+      Bateria y Niveles
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox"  [(ngModel)]="veiculo.tolvas" name="tolvas">
+    <label class="form-check-label" >
+      Tolvas
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox"  [(ngModel)]="veiculo.marcointerpuertas" name="marcointerpuertas">
+    <label class="form-check-label" >
+      Marco Interior Puertas
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox"  [(ngModel)]="veiculo.condicionbajopiso" name="condicionbajopiso">
+    <label class="form-check-label" >
+      Condiciones Bajo Piso
+    </label>
+  </div>
+  <p>
+
+  </p>
+
+</div>
+<!----- Transmisión y combustible-------->
+
+
+<div class="form-group">
+  <label>Transmisión y combustible</label>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox"  [(ngModel)]="veiculo.standard" name="standard">
+    <label class="form-check-label" >
+      Standard
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox"  [(ngModel)]="veiculo.automatico" name="automatico">
+    <label class="form-check-label" >
+      Automático
+    </label>
+  </div>
+</div>
+
+
+<hr>
+<div class="form-group text-center">
+  <button type="submit"
+          class="btn btn-primary w-25">
+    <i class="fa fa-save"></i>
+    Guardar
+  </button>
+</div>
+
+
+</form>
