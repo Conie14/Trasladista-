@@ -1,0 +1,197 @@
+<p>servicio works!</p>
+<h1>SERVICIO <small>ID</small> </h1>
+<hr>
+
+
+<div class="row text-right">
+  <div class="col">
+    <button class="btn btn-danger"
+            routerLink="/servicios">
+      <i class="fa fa-arrow-left"></i>
+      Regresar
+    </button>
+  </div>
+</div>
+
+<div class="row animated fadeIn faster">
+  <div class="col">
+  <form (ngSubmit)="guardar(f)" #f="ngForm" >
+
+
+      <div class="form-group">
+        <label>Duración</label>
+        <input type="number"
+               class="form-control"
+               placeholder="duracion "
+               [(ngModel)]="servicio.duracion"
+               name="duracion"
+               required>
+      </div>
+
+      <div class="form-group">
+        <label>Fecha</label>
+        <input type="Date"
+               class="form-control"
+               [(ngModel)]="servicio.fecha"
+               name="fecha"
+
+               placeholder="fecha">
+    </div>
+    <div class="form-group">
+      <label>Hora </label>
+      <input type="time"
+             class="form-control"
+             [(ngModel)]="servicio.hora"
+             name="hora"
+             placeholder="Hora">
+  </div>
+
+
+  <label>Direccion de ORIGEN</label>
+
+  <div class="form-group">
+    <label>Lugar de Origen</label>
+    <input type="text"
+           class="form-control"
+           [(ngModel)]="servicio.lugar_origen"
+           name="lugar_origen"
+           placeholder="Lugar de Origen">
+  </div>
+
+  <div class="form-group">
+    <label>Pais</label>
+    <input type="text"
+           class="form-control"
+           [(ngModel)]="servicio.pais"
+           name="pais"
+           placeholder="Pais">
+  </div>
+  <div class="form-group">
+    <label>Estado</label>
+    <input type="text"
+           class="form-control"
+           [(ngModel)]="servicio.estado"
+           name="estado"
+           placeholder="Estado">
+  </div>
+
+<div class="form-group">
+  <label>CALLE</label>
+  <input type="text"
+         class="form-control"
+         [(ngModel)]="servicio.calle"
+         name="calle"
+         placeholder="calle ">
+</div>
+
+
+<div class="form-group">
+  <label>GOLONIA</label>
+  <input type="text"
+         class="form-control"
+         [(ngModel)]="servicio.colonia"
+         name="colonia"
+         placeholder="colonia">
+</div>
+<div class="form-group">
+  <label>NUMERO EXTERIOR</label>
+  <input type="number"
+         class="form-control"
+         [(ngModel)]="servicio.numero_exterior"
+         name="numero_exterior"
+         placeholder="numero exterior ">
+</div>
+
+<div class="form-group">
+  <label>NUMERO INTERIOR</label>
+  <input type="number"
+         class="form-control"
+         [(ngModel)]="servicio.numero_interior"
+         name="numero_interior"
+         placeholder="numero interior ">
+</div>
+
+
+<label>Direccion de DESTINO</label>
+
+<div class="form-group">
+  <label>Lugar de DESTINO</label>
+  <input type="text"
+         class="form-control"
+         [(ngModel)]="servicio.lugar_destino"
+         name="lugar_destino"
+         placeholder="Lugar de Destino">
+</div>
+
+<div class="form-group">
+  <label>Pais</label>
+  <input type="text"
+         class="form-control"
+         [(ngModel)]="servicio.paisd"
+         name="pais"
+         placeholder="Pais">
+</div>
+<div class="form-group">
+  <label>Estado</label>
+  <input type="text"
+         class="form-control"
+         [(ngModel)]="servicio.estadod"
+         name="estado"
+         placeholder="Estado">
+</div>
+
+<div class="form-group">
+<label>CALLE</label>
+<input type="text"
+       class="form-control"
+       [(ngModel)]="servicio.called"
+       name="called"
+       placeholder="calle ">
+</div>
+
+
+<div class="form-group">
+<label>GOLONIA</label>
+<input type="text"
+       class="form-control"
+       [(ngModel)]="servicio.coloniad"
+       name="coloniad"
+       placeholder="colonia">
+</div>
+<div class="form-group">
+<label>NUMERO EXTERIOR</label>
+<input type="number"
+       class="form-control"
+       [(ngModel)]="servicio.numero_exteriord"
+       name="numero_exteriord"
+       placeholder="numero exterior ">
+</div>
+
+<div class="form-group">
+<label>NUMERO INTERIOR</label>
+<input type="number"
+       class="form-control"
+       [(ngModel)]="servicio.numero_interiord"
+       name="numero_interiord"
+       placeholder="numero interior ">
+</div>
+
+
+<hr>
+<div class="form-group text-center">
+  <button type="submit"
+          class="btn btn-primary w-25">
+    <i class="fa fa-save"></i>
+    Guardar
+  </button>
+</div>
+
+
+</form>
+
+
+
+
+</div>
+</div>
+

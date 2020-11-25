@@ -6,6 +6,8 @@ import { OperadorComponent } from './pages/operador/operador.component';
 import { OperadoresComponent } from './pages/operadores/operadores.component';
 import { VeiculoComponent } from './pages/veiculo/veiculo.component';
 import { VeiculosComponent } from './pages/veiculos/veiculos.component';
+import { ServicioComponent } from './pages/servicio/servicio.component';
+import { ServiciosComponent } from './pages/servicios/servicios.component';
 
 
 const routes:Routes=[
@@ -21,6 +23,10 @@ const routes:Routes=[
   {path:'veiculos',component:VeiculosComponent},
   {path:'veiculo/:id',component:VeiculoComponent},
   {path:'',pathMatch:'full',redirectTo:'veiculos'},
+
+  {path:'servicios',component:ServiciosComponent},
+  {path:'servicio/:id',component:ServicioComponent},
+  {path:'',pathMatch:'full',redirectTo:'servicios'},
 
 ];
 

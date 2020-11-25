@@ -15,6 +15,8 @@ import { OperadoresComponent } from './pages/operadores/operadores.component';
 import{AngularFireDatabaseModule}from'@angular/fire/database';
 import { VeiculoComponent } from './pages/veiculo/veiculo.component';
 import { VeiculosComponent } from './pages/veiculos/veiculos.component';
+import { ServicioComponent } from './pages/servicio/servicio.component';
+import { ServiciosComponent } from './pages/servicios/servicios.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { VeiculosComponent } from './pages/veiculos/veiculos.component';
     OperadorComponent,
     OperadoresComponent,
     VeiculoComponent,
-    VeiculosComponent
+    VeiculosComponent,
+    ServicioComponent,
+    ServiciosComponent
 
 
   ],

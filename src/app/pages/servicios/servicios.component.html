@@ -1,0 +1,98 @@
+<p>servicios works!</p>
+<h1>Listado de servicios destino</h1>
+<hr>
+<base href="/">
+
+
+<div class="row">
+  <div class="col text-right">
+      <a routerLink="/servicio/nuevo" routerLinkActive="active" class="button">Agregar servicio</a>
+      <router-outlet></router-outlet>
+  </div>
+</div>
+
+<table class="table mt-3">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Fecha</th>
+      <th scope="col">Duracion de horas</th>
+      <th scope="col">Lugar destino</th>
+      <th scope="col"> Pais</th>
+      <th scope="col">Estado</th>
+      <th scope="col">calle</th>
+      <th scope="col">Colonia</th>
+      <th scope="col">Numero Exterior</th>
+      <th scope="col">Numero Interior</th>
+      <th scope="col">Operador que atendera</th>
+      <th scope="col"> h</th>
+    </tr>
+
+  </thead>
+  <tbody>
+    <tr *ngFor="let servicio of servicios; let i=index">
+      <th scope="row">{{i+1}}</th>
+      <td>{{servicio.fecha}}</td>
+      <td>{{servicio.duracion}}</td>
+      <td>{{servicio.lugar_destino}}</td>
+      <td>{{servicio.paisd}}</td>
+      <td>{{servicio.estadod}}</td>
+      <td>{{servicio.called}}</td>
+      <td>{{servicio.coloniad}}</td>
+      <td>{{servicio.numero_exteriord}}</td>
+      <td>{{servicio.numero_interiord}}</td>
+      <td>  </td>
+      <td>
+        <button class="btn btn-info mr-1" [routerLink]="['/servicio',servicio.id]"
+        >/</button>
+
+
+      </td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+<h1>Listado de servicios origen</h1>
+
+<table class="table mt-3">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Fecha</th>
+      <th scope="col">Hora</th>
+      <th scope="col">Lugar origen</th>
+      <th scope="col">Pais</th>
+      <th scope="col">Estado</th>
+      <th scope="col">calle</th>
+      <th scope="col">Colonia</th>
+      <th scope="col">Numero Exterior</th>
+      <th scope="col">Numero Interior</th>
+      <th scope="col"> h</th>
+    </tr>
+
+  </thead>
+  <tbody>
+    <tr *ngFor="let servicio of servicios; let i=index">
+      <th scope="row">{{i+1}}</th>
+      <td>{{servicio.fecha}}</td>
+      <td>{{servicio.hora}}</td>
+      <td>{{servicio.lugar_origen}}</td>
+      <td>{{servicio.pais}}</td>
+      <td>{{servicio.estado}}</td>
+      <td>{{servicio.calle}}</td>
+      <td>{{servicio.colonia}}</td>
+      <td>{{servicio.numero_exterior}}</td>
+      <td>{{servicio.numero_interior}}</td>
+      <td>
+        <button class="btn btn-info mr-1" [routerLink]="['/servicio',servicio.id]"
+        >/</button>
+
+
+      </td>
+
+    </tr>
+
+  </tbody>
+</table>
