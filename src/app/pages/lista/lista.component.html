@@ -1,0 +1,151 @@
+<p>lista works!</p>
+<h1>lista de verificacion  <small>
+</small> </h1>
+<hr>
+
+
+<div class="row text-right">
+  <div class="col">
+    <button class="btn btn-danger"
+            routerLink="/clientes">
+      <i class="fa fa-arrow-left"></i>
+      Regresar
+    </button>
+  </div>
+</div>
+
+<div class="row animated fadeIn faster">
+  <div class="col">
+  <form (ngSubmit)="guardar(f)"
+    #f="ngForm">
+
+
+      <div class="form-group">
+        <label>Fecha de verificacion</label>
+        <input type="date"
+               class="form-control"
+               [(ngModel)]="lista.fecha_lv"
+              name="fecha_lv"
+               placeholder="Fecha de verificacion "
+
+               required>
+    </div>
+
+<div class="form-group">
+        <label>Hora de entrega </label>
+        <input type="time"
+               class="form-control"
+               [(ngModel)]="lista.hora_entrega_lv"
+              name="hora_entrega_lv"
+
+               placeholder="Hora de entrega">
+    </div>
+
+    <div class="form-group">
+      <label>Hora salida</label>
+      <input type="time"
+             class="form-control"
+             [(ngModel)]="lista.hora_salida_lv"
+             name="hora_entrega_lv"
+             placeholder="Hora salida ">
+  </div>
+
+<div class="form-group">
+  <label>Frontal</label>
+  <input type="text"
+         class="form-control"
+         [(ngModel)]="lista.frontal"
+         name="frontal"
+         placeholder="Frontal ">
+</div>
+
+
+
+<div class="form-group">
+  <label>Lateral derecho</label>
+  <input type="text"
+         class="form-control"
+         [(ngModel)]="lista.lateralderecho"
+         name="lateralderecho"
+         placeholder="Lateral derecho ">
+</div>
+
+<div class="form-group">
+  <label>Lateral Izquierdo</label>
+  <input type="text"
+         class="form-control"
+         [(ngModel)]="lista.lateralizquierdo"
+         name="lateralizquierdo"
+         placeholder="Lateral Izquierdo ">
+</div>
+
+<div class="form-group">
+  <label>Trasera</label>
+  <input type="text"
+         class="form-control"
+         [(ngModel)]="lista.trasera"
+         name="trasera"
+         placeholder="Trasera ">
+</div>
+
+                                            <h1>Fotos  <small></small> </h1>
+
+<div class="form-group">
+  <label>Foto Frontal</label>
+  <input type="file"
+
+         class="form-control"
+         [(ngModel)]="lista.foto_frontal"
+         name="foto_frontal"
+         placeholder="Foto Frontal ">
+</div>
+
+<div class="form-group">
+  <label>Foto lateral derecha</label>
+  <input type="file"
+         class="form-control"
+         [(ngModel)]="lista.foto_lateralderecha"
+         name="foto_lateralderecha"
+         placeholder="Foto lsteral drecha ">
+</div>
+
+<div class="form-group">
+  <label>Foto lateral Izquierdo</label>
+  <input type="file"
+         class="form-control"
+         [(ngModel)]="lista.foto_lateralizquierdo"
+         name="foto_lateralizquierdo"
+         placeholder="Foto lsteral izquierdo ">
+</div>
+
+<div class="form-group">
+  <label>Foto Trasera</label>
+  <input type="file"
+         class="form-control"
+         [(ngModel)]="lista.foto_trasera"
+         name="foto_trasera"
+         placeholder="Foto Trasera ">
+</div>
+
+
+<hr>
+<div class="form-group text-center">
+  <button type="submit"
+          class="btn btn-primary w-25">
+    <i class="fa fa-save"></i>
+    Guardar
+  </button>
+</div>
+
+
+</form>
+
+
+
+
+</div>
+</div>
+
+
+
+

@@ -17,6 +17,10 @@ import { VeiculoComponent } from './pages/veiculo/veiculo.component';
 import { VeiculosComponent } from './pages/veiculos/veiculos.component';
 import { ServicioComponent } from './pages/servicio/servicio.component';
 import { ServiciosComponent } from './pages/servicios/servicios.component';
+import { ListaComponent } from './pages/lista/lista.component';
+import { ListasComponent } from './pages/listas/listas.component';
+import{AngularFireStorageModule}from '@angular/fire/storage';
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,9 @@ import { ServiciosComponent } from './pages/servicios/servicios.component';
     VeiculoComponent,
     VeiculosComponent,
     ServicioComponent,
-    ServiciosComponent
+    ServiciosComponent,
+    ListaComponent,
+    ListasComponent
 
 
   ],
@@ -40,6 +46,7 @@ import { ServiciosComponent } from './pages/servicios/servicios.component';
     AppRoutingModule,
     RouterModule,
     AngularFireDatabaseModule,
+
 
     AngularFireModule.initializeApp(environment.firebase)
   ],

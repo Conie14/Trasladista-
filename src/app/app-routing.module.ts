@@ -8,6 +8,8 @@ import { VeiculoComponent } from './pages/veiculo/veiculo.component';
 import { VeiculosComponent } from './pages/veiculos/veiculos.component';
 import { ServicioComponent } from './pages/servicio/servicio.component';
 import { ServiciosComponent } from './pages/servicios/servicios.component';
+import { ListasComponent } from './pages/listas/listas.component';
+import { ListaComponent } from './pages/lista/lista.component';
 
 
 const routes:Routes=[
@@ -26,6 +28,10 @@ const routes:Routes=[
 
   {path:'servicios',component:ServiciosComponent},
   {path:'servicio/:id',component:ServicioComponent},
+  {path:'',pathMatch:'full',redirectTo:'servicios'},
+
+  {path:'listas',component:ListasComponent},
+  {path:'lista/:id',component:ListaComponent},
   {path:'',pathMatch:'full',redirectTo:'servicios'},
 
 ];
