@@ -27,25 +27,26 @@
       <th scope="col">Foto frontal</th>
       <th scope="col">Foto lateral derecho </th>
       <th scope="col">Foto  lateral izquierdo</th>
-      <th scope="col">Foto  trasera </th>
+      <th scope="col">Foto  Trasera</th>
       <th scope="col"> h</th>
     </tr>
 
   </thead>
   <tbody>
-    <tr  >
-      <th scope="row"> </th>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td>  </td>
-      <td><td>
+    <tr *ngFor="let lista of listas; let i=index" >
+      <th scope="row">{{i+1}}</th>
+      <td>{{lista.fecha}}</td>
+      <td>{{lista.hora_entrega_lv}}</td>
+      <td>{{lista.hora_salida_lv}}</td>
+      <td>{{lista.frontal}}</td>
+      <td>{{lista.lateralderecho}}</td>
+      <td>{{lista.lateralizquierdo}}</td>
+      <td>{{lista.trasera}}</td>
+      <td>{{lista.foto_frontal}}</td>
+      <td>{{lista.foto_lateralderecha}}</td>
+      <td>{{lista.foto_lateralizquierdo}}</td>
+      <td>{{lista.foto_trasera}}</td>
+      <td>
         <button class="btn btn-info mr-1"
         >/</button>
 
