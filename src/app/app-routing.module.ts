@@ -10,6 +10,8 @@ import { ServicioComponent } from './pages/servicio/servicio.component';
 import { ServiciosComponent } from './pages/servicios/servicios.component';
 import { ListasComponent } from './pages/listas/listas.component';
 import { ListaComponent } from './pages/lista/lista.component';
+import { ViaticosComponent } from './pages/viaticos/viaticos.component';
+import { ViaticoComponent } from './pages/viatico/viatico.component';
 
 
 const routes:Routes=[
@@ -33,6 +35,10 @@ const routes:Routes=[
   {path:'listas',component:ListasComponent},
   {path:'lista/:id',component:ListaComponent},
   {path:'',pathMatch:'full',redirectTo:'servicios'},
+
+  {path:'viaticos',component:ViaticosComponent},
+  {path:'viatico/:id',component:ViaticoComponent},
+  {path:'',pathMatch:'full',redirectTo:'viaticos'},
 
 ];
 

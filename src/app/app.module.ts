@@ -21,6 +21,8 @@ import { ListaComponent } from './pages/lista/lista.component';
 import { ListasComponent } from './pages/listas/listas.component';
 import{AngularFireStorageModule}from '@angular/fire/storage';
 import { from } from 'rxjs';
+import { ViaticoComponent } from './pages/viatico/viatico.component';
+import { ViaticosComponent } from './pages/viaticos/viaticos.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { from } from 'rxjs';
     ServicioComponent,
     ServiciosComponent,
     ListaComponent,
-    ListasComponent
+    ListasComponent,
+    ViaticoComponent,
+    ViaticosComponent
 
 
   ],
