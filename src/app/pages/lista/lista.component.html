@@ -92,9 +92,11 @@
 
 <div class="form-group">
   <label>Foto Frontal</label>
-  <input type="file"
+  <input  #imgx type="file"
 
          class="form-control"
+         acept=".jpg, .jpeg, .png" (change)="onUpload($event)"
+
          [(ngModel)]="lista.foto_frontal"
          name="foto_frontal"
          placeholder="Foto Frontal ">
@@ -104,6 +106,7 @@
   <label>Foto lateral derecha</label>
   <input type="file"
          class="form-control"
+         acept=".jpg, .jpeg, .png" (change)="onUpload($event)"
          [(ngModel)]="lista.foto_lateralderecha"
          name="foto_lateralderecha"
          placeholder="Foto lsteral drecha ">
@@ -113,6 +116,7 @@
   <label>Foto lateral Izquierdo</label>
   <input type="file"
          class="form-control"
+         acept=".jpg, .jpeg, .png" (change)="onUpload($event)"
          [(ngModel)]="lista.foto_lateralizquierdo"
          name="foto_lateralizquierdo"
          placeholder="Foto lsteral izquierdo ">
@@ -121,6 +125,7 @@
 <div class="form-group">
   <label>Foto Trasera</label>
   <input type="file"
+  acept=".jpg, .jpeg, .png" (change)="onUpload($event)"
          class="form-control"
          [(ngModel)]="lista.foto_trasera"
          name="foto_trasera"

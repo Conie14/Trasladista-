@@ -50,7 +50,7 @@ import { ViaticosComponent } from './pages/viaticos/viaticos.component';
     AppRoutingModule,
     RouterModule,
     AngularFireDatabaseModule,
-
+    AngularFireStorageModule,
 
     AngularFireModule.initializeApp(environment.firebase)
   ],
